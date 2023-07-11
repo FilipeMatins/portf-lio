@@ -38,6 +38,7 @@ body * {
 
 #container {
   width: 360px;
+  max-width: 588px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 56px;
