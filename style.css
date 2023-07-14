@@ -69,6 +69,10 @@ margin: auto;
   
 }
 
+#switch button:hover{
+  outline: 8px solid var(--highlight-color);
+}
+
 #switch button {
   position: absolute;
   left: 0;
@@ -82,6 +86,8 @@ margin: auto;
   left: 0;
   transform: translateY(-50%);
   cursor: pointer;
+
+  animation: slide-back 0.10s;
 }
 #switch span {
   display:block;
@@ -94,8 +100,7 @@ margin: auto;
    border-radius: 9999px;
 }
 .light #switch button {
-  right: 0;
-  left:initial
+ animation: slide-in 0.10s forwards;
 }
 
 ul {
@@ -148,4 +153,13 @@ border-radius: 50%;
 background: var(--highlight-color);
 
 
+}
+
+@keyframes slide-in {
+  from{ left: 0;}
+  to{left: 50%;}
+}
+@keyframes slide-back {
+  from{left:50%;}
+  to{left: 0;}
 }
